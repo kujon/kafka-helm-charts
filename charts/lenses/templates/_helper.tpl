@@ -169,7 +169,7 @@ PLAINTEXT
   password: {{ .Values.lenses.kafka.metrics.password | quote}},
   {{- end }}
   {{- if .Values.lenses.kafka.metrics.port}}
-  default.port: {{ .Values.lenses.kafka.metrics.port }},
+  port: {{ .Values.lenses.kafka.metrics.port }},
   {{- else}}
   port: [
     {{ range $index, $element := .Values.lenses.kafka.metrics.ports }}
